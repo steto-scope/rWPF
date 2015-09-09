@@ -1,0 +1,14 @@
+﻿<Window x:Class="SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:r="http://rwpf.codeplex.com"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" >
+            <r:IPv4Field NetmaskOnly="True" IP="127.0.0.1" />
+            <r:IPv4Field NetmaskOnly="False" />
+            <r:IPv4Field NetmaskOnly="False" FontSize="40"  />
+        </StackPanel>
+    </Grid>
+</Window>

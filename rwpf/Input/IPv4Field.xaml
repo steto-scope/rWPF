@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="rwpf.Input.IPv4Field"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:rwpf.Converters" Background="{x:Static SystemColors.ControlBrush}" BorderBrush="{x:Static SystemColors.ActiveBorderBrush}" BorderThickness="1"
+             xmlns:local="clr-namespace:rwpf.Input" Padding="0"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">  
+    <Border BorderThickness="{Binding BorderThickness, RelativeSource={RelativeSource Self}}" BorderBrush="{Binding BorderBrush, RelativeSource={RelativeSource Self}}" Margin="{Binding Padding, RelativeSource={RelativeSource Self}}" Background="{Binding Background, RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <c:ByteToStringConverter x:Key="b2s" />
+                <Style TargetType="TextBox">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderThickness" Value="0" />
+                </Style>
+        </Grid.Resources>
+            <TextBox Name="octett1" Text="{Binding FirstOctett, Converter={StaticResource b2s}, RelativeSource={RelativeSource AncestorType={x:Type local:IPv4Field}}}" MaxLength="3" PreviewTextInput="octett_PreviewTextInput" TextAlignment="Center" PreviewKeyDown="octett_KeyDown"  MinWidth="30" >
+           
+            </TextBox>
+            <TextBlock Text="." Grid.Column="1" />
+            <TextBox Name="octett2" Text="{Binding SecondOctett, Converter={StaticResource b2s}, RelativeSource={RelativeSource AncestorType={x:Type local:IPv4Field}}}" MaxLength="3"  PreviewTextInput="octett_PreviewTextInput" TextAlignment="Center" Grid.Column="2" PreviewKeyDown="octett_KeyDown"  MinWidth="30">
+    
+            </TextBox>
+            <TextBlock Text="." Grid.Column="3" />
+            <TextBox Name="octett3"  Text="{Binding ThirdOctett, Converter={StaticResource b2s}, RelativeSource={RelativeSource AncestorType={x:Type local:IPv4Field}}}" MaxLength="3" PreviewTextInput="octett_PreviewTextInput" TextAlignment="Center" Grid.Column="4" PreviewKeyDown="octett_KeyDown"  MinWidth="30" >
+          
+            </TextBox>
+            <TextBlock Text="." Grid.Column="5" />
+            <TextBox Name="octett4"  Text="{Binding FourthOctett, Converter={StaticResource b2s}, RelativeSource={RelativeSource AncestorType={x:Type local:IPv4Field}}}" MaxLength="3" PreviewTextInput="octett_PreviewTextInput" TextAlignment="Center" Grid.Column="6" PreviewKeyDown="octett_KeyDown"  MinWidth="30">
+            </TextBox>
+        </Grid>
+    </Border>
+</UserControl>
