@@ -53,6 +53,7 @@
     <Compile Include="Converters\BoolToCursorConverter.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Converters\IsNotNullToVisibilityConverter.cs" />
+    <Compile Include="Helpers\ToggleHelper.cs" />
     <Compile Include="TypeConverters\IPAddressConverter.cs" />
     <Page Include="Input\IPv4Field.xaml">
       <Generator>MSBuild:Compile</Generator>

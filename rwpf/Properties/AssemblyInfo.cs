@@ -13,7 +13,7 @@ using System.Windows.Markup;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("recursivebytes.com")]
 [assembly: AssemblyProduct("rwpf")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2015-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -44,6 +44,7 @@ using System.Windows.Markup;
 
 [assembly: XmlnsDefinitionAttribute("http://rwpf.codeplex.com", "rwpf.Input")]
 [assembly: XmlnsDefinitionAttribute("http://rwpf.codeplex.com", "rwpf.Converters")]
+[assembly: XmlnsDefinitionAttribute("http://rwpf.codeplex.com", "rwpf.Helpers")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
@@ -55,5 +56,5 @@ using System.Windows.Markup;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.6.0.0")]
-[assembly: AssemblyFileVersion("1.6.0.0")]
+[assembly: AssemblyVersion("1.7.0.0")]
+[assembly: AssemblyFileVersion("1.7.0.0")]
