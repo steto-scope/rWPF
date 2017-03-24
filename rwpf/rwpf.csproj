@@ -54,6 +54,9 @@
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Converters\IsNotNullToVisibilityConverter.cs" />
     <Compile Include="Helpers\ToggleHelper.cs" />
+    <Compile Include="Input\ProgressSlider.xaml.cs">
+      <DependentUpon>ProgressSlider.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TypeConverters\IPAddressConverter.cs" />
     <Page Include="Input\IPv4Field.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -65,6 +68,10 @@
     <Compile Include="Input\IPv4Field.xaml.cs">
       <DependentUpon>IPv4Field.xaml</DependentUpon>
     </Compile>
+    <Page Include="Input\ProgressSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

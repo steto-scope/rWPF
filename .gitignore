@@ -187,3 +187,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+*.snk
+/rwpf/NuGet.exe
+/rwpf/publish.bat
+/rwpf/rwpf.nuspec

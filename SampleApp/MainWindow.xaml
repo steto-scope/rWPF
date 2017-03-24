@@ -9,7 +9,7 @@
             <r:BoolToCursorConverter x:Key="b2c" />
         </Grid.Resources>
         <StackPanel HorizontalAlignment="Left" >
-            <r:IPv4Field NetmaskOnly="False" Margin="20" Cursor="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource b2c}, ConverterParameter={x:Static Cursors.Pen}}" FontSize="40" IP="127.0.0.1" />
+            <r:IPv4Field NetmaskOnly="False" Margin="20" Cursor="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource b2c}, ConverterParameter={x:Static Cursors.Pen}}"  IP="127.0.0.1" />
             <GroupBox Header="ToggleHelper">
                 <StackPanel>
                     <CheckBox Content="Check (true)" r:ToggleHelper.OriginalValue="true" />
@@ -17,9 +17,11 @@
                     <CheckBox Content="Check (not set)" r:ToggleHelper.OriginalValue="{x:Null}" />
                     <RadioButton GroupName="x" Content="Radio 1" r:ToggleHelper.OriginalValue="true" IsChecked="True"  />
                     <RadioButton GroupName="x" Content="Radio 2" r:ToggleHelper.OriginalValue="false" />
-                    <ToggleButton Content="ToggleButton" r:ToggleHelper.OriginalValue="false" />
+                    <ToggleButton  Content="ToggleButton" r:ToggleHelper.OriginalValue="false" />                    
                 </StackPanel>
             </GroupBox>
+            
+            <r:ProgressSlider Value="50" Margin="5" IsSnapToTickEnabled="True" TickAmount="10" />
         </StackPanel>
     </Grid>
 </Window>
